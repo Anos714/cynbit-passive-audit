@@ -1,0 +1,6 @@
+# Captures are stored with LF endings (normalised before commit) so byte counts
+# and diffs stay stable across platforms. Disable end-of-line conversion.
+evidence/headers/** -text
+# Third-party bundles are evidence, not source. Keep them out of language stats
+# and preserve the recorded bytes.
+evidence/assets/** -text linguist-vendored
