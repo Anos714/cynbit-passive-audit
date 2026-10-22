@@ -32,7 +32,7 @@ cached homepage on a warm connection.
 | [PERF-04](findings/performance/PERF-04-sitemap-lastmod.md) | Sitemap `lastmod` is request time for 16 static URLs | Low | Confirmed | [sitemap](evidence/raw/sitemap.xml) |
 | [PERF-05](findings/performance/PERF-05-third-party-render-blocking.md) | Third-party font CSS is render-blocking; GTM is preloaded before interaction | Low | Confirmed | [home HTML](evidence/raw/home_run1.html) |
 
-Severity is scoped to the observed configuration. No authentication, payment flow, or sensitive customer data was found, so there is no basis for a Critical or High rating. The Medium findings are defense-in-depth or repeat-visit performance issues with realistic but bounded impact. See the [rubric](docs/03-security-findings.md#severity-rubric).
+Severity is scoped to the observed configuration. No authentication, payment flow, or sensitive customer data was found, so there is no basis for a Critical or High rating. The Medium findings are defense-in-depth or repeat-visit performance issues with realistic but bounded impact. See the [rubric](docs/00-scope-and-methodology.md#severity-rubric).
 
 ## What the site does correctly
 

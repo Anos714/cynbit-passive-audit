@@ -90,7 +90,7 @@ Then:
 
 ## Why this approach
 
-I rejected removing the App Router or replacing the framework: the shared runtime is the cost of the current architecture, and a migration would exceed the problem. I also rejected a blanket “remove animations” recommendation; that is a product change. Lazy-loading delayed/below-the-fold client components is lower risk and directly targets the initial payload.
+I rejected removing the App Router or replacing the framework: the shared runtime is the cost of the current architecture, and a migration would exceed the problem. I also rejected a blanket "remove animations" recommendation; that is a product change. Lazy-loading delayed/below-the-fold client components is lower risk and directly targets the initial payload.
 
 ## Verification
 

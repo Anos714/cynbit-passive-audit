@@ -24,8 +24,8 @@ Source: [contact page HTML](../evidence/raw/contact_run1.html), [action extracts
 | `action` attribute | None |
 | Client submit handler | `preventDefault()`, builds `FormData`, calls the `submitInquiry` Server Action |
 | Client-side constraints | HTML `required` and `type=email` only; no `minlength`, `maxlength`, `pattern`, or schema object observed in the contact chunk |
-| Success UI | “Inquiry Received.” |
-| Error UI | Generic “Something went wrong. Please try again or email us directly.” |
+| Success UI | "Inquiry Received." |
+| Error UI | Generic "Something went wrong. Please try again or email us directly." |
 | Server response shape | `{ success: boolean }`; the client branches on `r.success` |
 
 The absence of client-side validation is not a vulnerability. It means the server must enforce the schema; that behavior cannot be verified without submitting the form, which the brief forbids. See [limitations](06-limitations.md).

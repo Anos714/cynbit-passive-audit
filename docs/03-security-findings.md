@@ -2,13 +2,7 @@
 
 ## Severity rubric
 
-| Severity | Definition used in this report |
-|---|---|
-| Critical | Confirmed compromise with little or no precondition, or unauthenticated access to sensitive data. |
-| High | Confirmed issue with a realistic path to user harm, data exposure, or sustained outage. |
-| Medium | Confirmed weakness that materially weakens defense-in-depth or repeat-user security, with a precondition or bounded impact. |
-| Low | Confirmed hardening gap with limited direct impact. |
-| Info | Context; not a defect by itself. |
+The criteria are defined once in [scope and methodology](00-scope-and-methodology.md#severity-rubric). This page uses those levels and does not redefine them.
 
 ## Index
 
@@ -23,7 +17,7 @@
 
 ## Why there is no Critical or High
 
-The accessible application is a marketing site. No login, payment, account, admin UI, or sensitive record was observed. The only write surfaces found are two Server Actions (contact and newsletter), and neither was invoked. Missing headers reduce defense-in-depth but do not, by themselves, give an attacker a path to data. The report does not upgrade them to High on the theoretical basis that “XSS could happen.”
+The accessible application is a marketing site. No login, payment, account, admin UI, or sensitive record was observed. The only write surfaces found are two Server Actions (contact and newsletter), and neither was invoked. Missing headers reduce defense-in-depth but do not, by themselves, give an attacker a path to data. The report does not upgrade them to High on the theoretical basis that "XSS could happen."
 
 ## Header matrix
 

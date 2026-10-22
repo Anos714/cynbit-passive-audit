@@ -14,7 +14,7 @@ configuration of `cynbit.in`: response headers, caching and rendering model, API
 surface exposed in client bundles, TLS posture, and measured page performance.
 Nine findings, each with raw evidence and a concrete fix.
 
-## How to read it in three minutes
+## Where to start
 
 1. [`README.md`](README.md) — summary, findings table, what the site does well.
 2. [`findings/`](findings/) — one file per finding; every claim links to a capture.
@@ -29,7 +29,7 @@ Documentation only. No build step, no dependencies, no services required.
   by GitHub.
 - Snippets under [`snippets/`](snippets/) are TypeScript/Next.js reference code
   for reading. They are not wired into a build.
-- Captures under [`evidence/`](evidence/) are plain text, HTML, and JavaScript.
+- Captures under [`evidence/`](evidence/) are plain text, HTML, CSV, and the bundle manifest.
 
 ## Method
 

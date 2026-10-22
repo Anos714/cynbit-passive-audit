@@ -1,6 +1,6 @@
 # 05 — Recommendations and roadmap
 
-Sequenced by impact per unit of effort. “Now” items are small, reversible config changes. “Next” items need a code change and a test. “Later” items depend on an inventory or a product decision.
+Sequenced by impact per unit of effort. "Now" items are small, reversible config changes. "Next" items need a code change and a test. "Later" items depend on an inventory or a product decision.
 
 ## Now
 

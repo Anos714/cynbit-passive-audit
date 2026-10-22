@@ -40,7 +40,7 @@ The 16 request-time URLs are exactly the static marketing pages (`/`, `/story`, 
 
 `lastmod` is a hint search engines may use to decide whether a URL needs recrawling. If it changes on every request, it stops distinguishing changed pages from unchanged ones. The sitemap also misses the edge cache (`age: 0`, `x-vercel-cache: MISS`), so every crawler request regenerates the XML.
 
-This is a correctness problem more than a speed problem. A sitemap that says “all 16 pages changed one second ago” is less useful than one with no `lastmod` at all.
+This is a correctness problem more than a speed problem. A sitemap that says "all 16 pages changed one second ago" is less useful than one with no `lastmod` at all.
 
 ## Root cause
 
@@ -81,7 +81,7 @@ Set `BUILD_TIME` in the deployment environment, or derive it once at module scop
 
 ## Why this approach
 
-I rejected removing `lastmod` globally: content pages do have real dates, and those are useful. I also rejected using the current time for “freshness”; that is the bug. A build timestamp is honest for static pages, and per-entry dates are honest for CMS content.
+I rejected removing `lastmod` globally: content pages do have real dates, and those are useful. I also rejected using the current time for "freshness"; that is the bug. A build timestamp is honest for static pages, and per-entry dates are honest for CMS content.
 
 ## Verification
 

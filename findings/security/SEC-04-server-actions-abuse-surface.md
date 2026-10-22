@@ -76,7 +76,7 @@ route handler.
 
 ## Recommended fix
 
-Three controls, in order of value.
+Three controls, in the order I would ship them:
 
 **1. Strict server-side schema, unknown keys rejected.**
 

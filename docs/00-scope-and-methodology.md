@@ -27,7 +27,7 @@ Evaluate the publicly observable backend and delivery configuration of `https://
 
 No POST, PUT, PATCH, or DELETE was sent. No form was submitted. No Server Action was invoked. No authentication, fuzzing, injection, directory discovery, or load test was performed.
 
-## Forbidden actions deliberately avoided
+## What I did not do
 
 - Port scanning, service fingerprinting, network enumeration.
 - Directory/endpoint/parameter brute force (`ffuf`, `dirb`, `gobuster`).
@@ -67,4 +67,4 @@ and reports a small warm-connection sample where the same connection is reused. 
 | Low | Confirmed hardening gap or inefficiency with limited direct impact. |
 | Info | Observation useful for context; not a defect on its own. |
 
-**Distribution:** 0 Critical, 0 High, 4 Medium, 4 Low, 1 Info. A public marketing site with no login, payment, or observed sensitive endpoint does not justify a Critical/High rating for missing headers or cache tuning. That restraint is intentional.
+**Distribution:** 0 Critical, 0 High, 4 Medium, 4 Low, 1 Info. A public marketing site with no login, payment, or observed sensitive endpoint does not justify a Critical/High rating for missing headers or cache tuning.
