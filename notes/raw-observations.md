@@ -15,7 +15,7 @@ All requests were anonymous and sequential. No POST, no form submission.
 | 13:04:38 | `GET /sitemap.xml` | `200`, `x-vercel-cache: MISS`, `age: 0` | `headers/sitemap.xml`, `raw/sitemap.xml` |
 | 13:04:56 | `GET /this-page-should-not-exist-xyz` | `404`, `x-next-error-status: 404` | `headers/404.txt`, `raw/404.html` |
 | 13:04:59 | `OPTIONS /` | `204` | `headers/options_home.txt` |
-| 13:05–13:07 | 3 × `GET` each: `/`, `/contact`, `/careers`, `/services`, `/bitelevate` | `200` each | `headers/*_run*.txt`, `raw/*_run*.html`, `timings/pages.csv` |
+| 13:05–13:07 | 3 × `GET` each: `/`, `/contact`, `/careers`, `/services`, `/bitelevate` | `200` each | `headers/*_run*.txt`, `raw/*_run1.html` (runs 2–3 were byte-identical and are not retained), `timings/pages.csv` |
 | 13:07–13:12 | 16 homepage JS + 2 CSS + contact page JS | `200` each | `assets/`, `headers/assets/`, `timings/assets.csv` |
 | 13:18:19 | `GET .../webpack-13fd2c27c7c4c378.js.map` | `403`, `x-robots-tag: noindex` | `headers/source_map.txt` |
 | 13:18:23 | `GET /` with `If-None-Match: W/"eb276f..."` | `304` | `headers/conditional_home.txt` |
