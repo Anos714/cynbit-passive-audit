@@ -20,7 +20,7 @@
 - Access to the Next.js config and Server Action source would confirm the cache and header root causes.
 - RUM data would replace the single-vantage TTFB numbers and could move `/careers` up or down.
 - A subdomain inventory would make the HSTS recommendation safe to action.
-- A rendered screenshot or Lighthouse trace would add visual/LCP evidence; the headless screenshot attempt produced no file (see [screenshots README](../evidence/screenshots/README.md)).
+- A rendered screenshot or Lighthouse trace would add visual/LCP evidence. One homepage render is in the screenshots folder; `/careers` and `/contact` fade in after load and are not captured.
 
 ## What this report does not claim
 

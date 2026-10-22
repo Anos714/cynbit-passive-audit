@@ -23,9 +23,9 @@ All requests were anonymous and sequential. No POST, no form submission.
 | 13:19 | TLS handshake + certificate reads | TLS 1.3, verify 0 | `tls/README.md` |
 | 13:19 | DNS A-record resolution | 216.198.79.65 / 64.29.17.65 / 216.198.79.1 | `tls/README.md` |
 | 13:20–13:22 | Warm-connection timing samples (`/`, `/careers`) | `200` | `timings/warm.csv` |
-| 13:23 | Headless Firefox screenshot attempt | no file produced | `screenshots/README.md` |
+| 13:23 | Headless Firefox screenshot attempt | no file produced (default profile was locked); a later retry with a fresh profile succeeded | `screenshots/README.md` |
 
-Approximate total: **55 HTTP requests over 19 minutes**. The three-run timing samples are bursts of three with 3-second spacing; there are no concurrent requests.
+Approximate total: **55 HTTP requests over 19 minutes**. The three-run timing samples are bursts of three with 3-second spacing; there are no concurrent requests. The screenshot retry happened later and is not part of this window or the timing sample.
 
 ## Host and redirect behavior
 
