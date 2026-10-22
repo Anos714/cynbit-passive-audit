@@ -7,7 +7,7 @@
 | Area | <security / performance / caching / API> |
 | Affected URL | `<URL>` |
 | Date | 2026-10-22 |
-| Evidence | [capture](relative/link), [capture](relative/link) |
+| Evidence | `evidence/headers/<capture>.txt`, `evidence/raw/<capture>.html` |
 
 ## What I observed
 
