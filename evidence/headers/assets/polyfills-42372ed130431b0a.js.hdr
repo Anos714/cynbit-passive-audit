@@ -1,0 +1,15 @@
+HTTP/2 200
+access-control-allow-origin: *
+age: 80665
+cache-control: public,max-age=31536000,immutable
+content-disposition: inline; filename="polyfills-42372ed130431b0a.js"
+content-encoding: br
+content-type: application/javascript; charset=utf-8
+date: Thu, 22 Oct 2026 13:09:24 GMT
+etag: W/"846118c33b2c0e922d7b3a7676f81f6f"
+last-modified: Wed, 21 Oct 2026 14:44:59 GMT
+server: Vercel
+strict-transport-security: max-age=63072000
+x-matched-path: /_next/static/chunks/polyfills-42372ed130431b0a.js
+x-vercel-cache: HIT
+x-vercel-id: bom1::k5954-1792674564353-5a51ba3781f4

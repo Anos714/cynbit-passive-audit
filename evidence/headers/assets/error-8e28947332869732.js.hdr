@@ -1,0 +1,15 @@
+HTTP/2 200
+access-control-allow-origin: *
+age: 20137
+cache-control: public,max-age=31536000,immutable
+content-disposition: inline; filename="error-8e28947332869732.js"
+content-encoding: br
+content-type: application/javascript; charset=utf-8
+date: Thu, 22 Oct 2026 13:08:41 GMT
+etag: W/"9b2a41a962076c6addbdb49fa38df739"
+last-modified: Thu, 22 Oct 2026 07:33:03 GMT
+server: Vercel
+strict-transport-security: max-age=63072000
+x-matched-path: /_next/static/chunks/app/error-8e28947332869732.js
+x-vercel-cache: HIT
+x-vercel-id: bom1::f79ts-1792674521706-d94185dcfa8a

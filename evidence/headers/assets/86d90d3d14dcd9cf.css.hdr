@@ -1,0 +1,15 @@
+HTTP/2 200
+access-control-allow-origin: *
+age: 20191
+cache-control: public,max-age=31536000,immutable
+content-disposition: inline; filename="86d90d3d14dcd9cf.css"
+content-encoding: br
+content-type: text/css; charset=utf-8
+date: Thu, 22 Oct 2026 13:09:35 GMT
+etag: W/"bf63002cd18ec2802da401b14eabfc78"
+last-modified: Thu, 22 Oct 2026 07:33:03 GMT
+server: Vercel
+strict-transport-security: max-age=63072000
+x-matched-path: /_next/static/css/86d90d3d14dcd9cf.css
+x-vercel-cache: HIT
+x-vercel-id: bom1::qxcrt-1792674575538-6b536648cd84

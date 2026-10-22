@@ -1,0 +1,16 @@
+HTTP/2 200
+age: 429065
+cache-control: public, max-age=0, must-revalidate
+content-encoding: br
+content-type: text/html; charset=utf-8
+date: Sat, 17 Oct 2026 13:56:14 GMT
+etag: W/"6vdazkzvd32336"
+server: Vercel
+strict-transport-security: max-age=63072000
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+x-matched-path: /bitelevate
+x-nextjs-prerender: 1
+x-nextjs-stale-time: 300
+x-powered-by: Next.js
+x-vercel-cache: HIT
+x-vercel-id: bom1::iad1::q7x4v-1792674440709-e9d4c7d322db

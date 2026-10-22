@@ -1,0 +1,5 @@
+HTTP/1.0 308 Permanent Redirect
+Content-Type: text/plain
+Location: https://cynbit.in/
+Refresh: 0;url=https://cynbit.in/
+server: Vercel

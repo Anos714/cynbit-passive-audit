@@ -1,0 +1,6 @@
+HTTP/2 304
+cache-control: public, max-age=0, must-revalidate
+date: Thu, 22 Oct 2026 13:18:23 GMT
+server: Vercel
+x-vercel-cache: HIT
+x-vercel-id: bom1::72nw8-1792675103314-a009e3669c26

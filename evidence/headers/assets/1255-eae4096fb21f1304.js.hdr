@@ -1,0 +1,15 @@
+HTTP/2 200
+access-control-allow-origin: *
+age: 558239
+cache-control: public,max-age=31536000,immutable
+content-disposition: inline; filename="1255-eae4096fb21f1304.js"
+content-encoding: br
+content-type: application/javascript; charset=utf-8
+date: Thu, 22 Oct 2026 13:08:14 GMT
+etag: W/"409ea86cae7ec60c2314fd6ad7816905"
+last-modified: Fri, 16 Oct 2026 02:04:14 GMT
+server: Vercel
+strict-transport-security: max-age=63072000
+x-matched-path: /_next/static/chunks/1255-eae4096fb21f1304.js
+x-vercel-cache: HIT
+x-vercel-id: bom1::v5hvq-1792674494419-ec2ae3105f1b

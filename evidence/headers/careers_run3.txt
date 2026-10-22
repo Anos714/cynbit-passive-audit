@@ -1,0 +1,14 @@
+HTTP/2 200
+age: 0
+cache-control: private, no-cache, no-store, max-age=0, must-revalidate
+content-encoding: br
+content-type: text/html; charset=utf-8
+date: Thu, 22 Oct 2026 13:07:05 GMT
+link: </_next/static/media/4c9affa5bc8f420e-s.p.woff2>; rel=preload; as="font"; crossorigin=""; type="font/woff2", </_next/static/media/636a5ac981f94f8b-s.p.woff2>; rel=preload; as="font"; crossorigin=""; type="font/woff2", </logo.svg>; rel=preload; as="image", </_next/static/css/86d90d3d14dcd9cf.css>; rel=preload; as="style", </_next/static/css/fb477f3bddb905c1.css>; rel=preload; as="style"
+server: Vercel
+strict-transport-security: max-age=63072000
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+x-matched-path: /careers
+x-powered-by: Next.js
+x-vercel-cache: MISS
+x-vercel-id: bom1::iad1::xg4bf-1792674425021-4d4890a8e721

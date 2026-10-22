@@ -1,0 +1,16 @@
+HTTP/2 404
+access-control-allow-origin: *
+age: 574663
+cache-control: public, max-age=0, must-revalidate
+content-disposition: inline; filename="404"
+content-encoding: br
+content-type: text/html; charset=utf-8
+date: Thu, 22 Oct 2026 13:04:56 GMT
+etag: W/"41282875ccdc721b145ff618d2d161f8"
+last-modified: Tue, 15 Oct 2026 21:27:12 GMT
+server: Vercel
+strict-transport-security: max-age=63072000
+x-matched-path: /404
+x-next-error-status: 404
+x-vercel-cache: HIT
+x-vercel-id: bom1::97xqz-1792674296163-6eaa6b6797af

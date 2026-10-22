@@ -1,0 +1,12 @@
+HTTP/2 204
+access-control-allow-methods: OPTIONS, GET, HEAD
+access-control-allow-origin: *
+age: 75601
+cache-control: public, max-age=0, must-revalidate
+content-disposition: inline
+date: Thu, 22 Oct 2026 13:04:59 GMT
+server: Vercel
+strict-transport-security: max-age=63072000
+x-matched-path: /
+x-vercel-cache: HIT
+x-vercel-id: bom1::cnlwb-1792674299076-afe083f3a2ea

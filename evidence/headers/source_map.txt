@@ -1,0 +1,9 @@
+HTTP/2 403
+cache-control: no-store
+content-type: text/plain
+date: Thu, 22 Oct 2026 13:18:19 GMT
+server: Vercel
+strict-transport-security: max-age=63072000
+x-matched-path: /_next/static/not-found.txt
+x-robots-tag: noindex
+x-vercel-id: bom1::6vcbn-1792675099032-d1a51c472f90

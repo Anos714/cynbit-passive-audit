@@ -1,0 +1,15 @@
+HTTP/2 200
+access-control-allow-origin: *
+age: 117164
+cache-control: public,max-age=31536000,immutable
+content-disposition: inline; filename="webpack-13fd2c27c7c4c378.js"
+content-encoding: br
+content-type: application/javascript; charset=utf-8
+date: Thu, 22 Oct 2026 13:09:31 GMT
+etag: W/"d6fa3349a80b1b6076d5ffec0171ff69"
+last-modified: Wed, 21 Oct 2026 04:36:46 GMT
+server: Vercel
+strict-transport-security: max-age=63072000
+x-matched-path: /_next/static/chunks/webpack-13fd2c27c7c4c378.js
+x-vercel-cache: HIT
+x-vercel-id: bom1::xkqj5-1792674571339-69d67e0bd673
