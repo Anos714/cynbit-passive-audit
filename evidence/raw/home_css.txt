@@ -1,0 +1,2 @@
+/_next/static/css/86d90d3d14dcd9cf.css
+/_next/static/css/fb477f3bddb905c1.css

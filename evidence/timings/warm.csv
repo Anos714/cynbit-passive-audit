@@ -1,0 +1,6 @@
+page,run,http,ttfb_s,total_s,connect_s,tls_s,note
+home,1,200,4.193851,4.195562,2.340861,3.398914,first request on new connection
+home,2,200,0.718769,0.720563,0.000000,0.000000,reused connection
+home,3,200,0.581317,0.583465,0.000000,0.000000,reused connection
+careers,1,200,1.738190,1.987351,0.000000,0.000000,reused connection
+careers,2,200,1.107504,1.301517,0.000000,0.000000,reused connection
