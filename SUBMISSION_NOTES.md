@@ -5,7 +5,7 @@ setup notes.
 
 ## Repository
 
-_TODO: public GitHub URL_
+https://github.com/Anos714/cynbit-passive-audit
 
 ## What this is
 
