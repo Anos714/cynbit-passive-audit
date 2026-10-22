@@ -42,7 +42,7 @@ No POST, PUT, PATCH, or DELETE was sent. No form was submitted. No Server Action
 
 - Raw headers are stored in [`evidence/headers/`](../evidence/headers/); header names, values, and order are verbatim, with CRLF normalized to LF and trailing whitespace stripped (see [normalization note](../notes/raw-observations.md#capture-normalization-note)).
 - Raw HTML, `robots.txt`, `sitemap.xml`, and the 404 body are in [`evidence/raw/`](../evidence/raw/).
-- Decoded bundle files and their response headers are in [`evidence/assets/`](../evidence/assets/) and [`evidence/headers/assets/`](../evidence/headers/assets/).
+- Bundle sizes, hashes, and the two Server Action extracts are in [`evidence/assets/`](../evidence/assets/); response headers for each bundle are in [`evidence/headers/assets/`](../evidence/headers/assets/). Originals are not committed — reproducible from the hashes in the manifest.
 - Timing CSVs are in [`evidence/timings/`](../evidence/timings/).
 - TLS and DNS observations are in [`evidence/tls/README.md`](../evidence/tls/README.md).
 - No cookies were set on any response. No PII, credentials, or session tokens were collected. The site's public business phone/address in JSON-LD was not reproduced because it is unnecessary for the findings.

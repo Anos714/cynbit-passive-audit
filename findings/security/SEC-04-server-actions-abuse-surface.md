@@ -7,7 +7,7 @@
 | Area | Authentication / input validation / abuse resistance |
 | Affected URL | `/contact` (`submitInquiry`), all marketing pages (`subscribeToNewsletter`) |
 | Date | 2026-10-22 |
-| Evidence | [contact chunk](../../evidence/assets/js/contact-page.js), [layout chunk](../../evidence/assets/js/layout-98cfbe01c086f5c9.js), [API surface](../../docs/02-api-surface.md) |
+| Evidence | [action extracts](../../evidence/assets/extracts/server-actions.txt), [bundle manifest](../../evidence/assets/MANIFEST.csv), [API surface](../../docs/02-api-surface.md) |
 
 ## What I observed
 

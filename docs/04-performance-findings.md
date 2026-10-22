@@ -48,7 +48,7 @@ Largest decoded chunks:
 | `app/(marketing)/layout-98cfbe01c086f5c9.js` | 26,611 B | 7,643 B | `public, max-age=31536000, immutable` |
 | `app/(marketing)/contact/page-c119885162e933b7.js` | 24,534 B | 6,284 B | `public, max-age=31536000, immutable` |
 
-The cache policy on static assets is correct and does not need changing. The issue is the amount of code, not its delivery. Full table: [`assets.csv`](../evidence/timings/assets.csv); raw files: [`evidence/assets/`](../evidence/assets/).
+The cache policy on static assets is correct and does not need changing. The issue is the amount of code, not its delivery. Full table: [`assets.csv`](../evidence/timings/assets.csv); sizes and hashes: [`MANIFEST.csv`](../evidence/assets/MANIFEST.csv).
 
 ## Cache behavior
 

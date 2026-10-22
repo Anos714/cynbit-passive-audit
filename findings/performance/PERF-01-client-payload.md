@@ -7,7 +7,7 @@
 | Area | Performance / client payload |
 | Affected URL | `/` (homepage) |
 | Date | 2026-10-22 |
-| Evidence | [asset timings](../../evidence/timings/assets.csv), [asset files](../../evidence/assets/js/), [home HTML](../../evidence/raw/home_run1.html) |
+| Evidence | [asset timings](../../evidence/timings/assets.csv), [bundle manifest](../../evidence/assets/MANIFEST.csv), [home HTML](../../evidence/raw/home_run1.html) |
 
 ## What I observed
 

@@ -1,0 +1,60 @@
+# Server Action references (verbatim extracts)
+
+Source: publicly served Next.js chunks, captured 2026-10-22.
+Original files: `js/contact-page.js` (24,534 B) and
+`js/layout-98cfbe01c086f5c9.js` (26,611 B) — see
+[`../MANIFEST.csv`](../MANIFEST.csv).
+
+---
+
+## 1. Contact form — `submitInquiry`
+
+File: `contact-page.js`
+
+```js
+createServerReference)("40abb1a98c0be9294b518c6ca84ffcc8f63f3a5849",
+  d.callServer, void 0, d.findSourceMapURL, "submitInquiry")
+```
+
+Immediately after, the submit handler:
+
+```js
+d = async e => {
+  e.preventDefault(), t(!0), n(null);
+  let a = new FormData(e.currentTarget),
+      r = await x(a);
+  t(!1),
+  r.success ? i(!0) : n("Something went wrong. Please try again or email us directly.")
+}
+```
+
+`x` is the `createServerReference` binding above. The client branches on
+`{ success }`; there is no visible schema, no CSRF token, and no captcha.
+
+---
+
+## 2. Newsletter modal — `subscribeToNewsletter`
+
+File: `layout-98cfbe01c086f5c9.js`
+
+```js
+let s = (0, r.createServerReference)(
+  "404e55971a25359df792b3be859e08deff64cc9a32",
+  r.callServer, void 0, r.findSourceMapURL, "subscribeToNewsletter")
+```
+
+The modal is injected after a delay and suppressed on repeat visits via
+`localStorage["cynbit_newsletter_seen"]`.
+
+---
+
+## 3. Why these lines matter
+
+The action ID is public by design — Next.js serialises it into the client bundle
+so the browser can address the action. Its presence is **not** a vulnerability.
+What it establishes is narrower and still useful: both mutations are reachable as
+same-origin `POST`s without loading the page, so validation and throttling must be
+enforced server-side.
+
+Neither action was invoked. See
+[`../../../findings/security/SEC-04-server-actions-abuse-surface.md`](../../../findings/security/SEC-04-server-actions-abuse-surface.md).

@@ -7,8 +7,8 @@ No public REST, GraphQL, or versioned JSON API was found in the downloaded clien
 | Surface | Evidence | Method | Confidence |
 |---|---|---|---|
 | HTML routes `/`, `/contact`, `/careers`, `/services`, `/bitelevate` | [headers](../evidence/headers/) | `GET` | Confirmed |
-| `submitInquiry` Server Action | `createServerReference("40abb1a98c0be9294b518c6ca84ffcc8f63f3a5849", …, "submitInquiry")` in [contact chunk](../evidence/assets/js/contact-page.js) | Same-origin POST to the contact page with `Next-Action` header (framework behavior); **not invoked** | Confirmed ID; **Strongly inferred** transport |
-| `subscribeToNewsletter` Server Action | `createServerReference("404e55971a25359df792b3be859e08deff64cc9a32", …, "subscribeToNewsletter")` in [layout chunk](../evidence/assets/js/layout-98cfbe01c086f5c9.js) | Same-origin POST to the current marketing page; **not invoked** | Confirmed ID; **Strongly inferred** transport |
+| `submitInquiry` Server Action | `createServerReference("40abb1a98c0be9294b518c6ca84ffcc8f63f3a5849", …, "submitInquiry")` in [action extracts](../evidence/assets/extracts/server-actions.txt) | Same-origin POST to the contact page with `Next-Action` header (framework behavior); **not invoked** | Confirmed ID; **Strongly inferred** transport |
+| `subscribeToNewsletter` Server Action | `createServerReference("404e55971a25359df792b3be859e08deff64cc9a32", …, "subscribeToNewsletter")` in [action extracts](../evidence/assets/extracts/server-actions.txt) | Same-origin POST to the current marketing page; **not invoked** | Confirmed ID; **Strongly inferred** transport |
 | `/api/*`, `/graphql`, `/v1/*` | No matches in 17 downloaded JS chunks | — | **Confirmed absence in downloaded code**, not a guarantee for the whole deployment |
 | `/admin/`, `/portal/` | Listed in `robots.txt`; not requested | — | Unverified by design |
 
@@ -16,7 +16,7 @@ The action IDs are build-specific. They will change on redeploy; do not treat th
 
 ## Contact form
 
-Source: [contact page HTML](../evidence/raw/contact_run1.html), [contact chunk](../evidence/assets/js/contact-page.js).
+Source: [contact page HTML](../evidence/raw/contact_run1.html), [action extracts](../evidence/assets/extracts/server-actions.txt).
 
 | Property | Observed |
 |---|---|
@@ -32,7 +32,7 @@ The absence of client-side validation is not a vulnerability. It means the serve
 
 ## Newsletter form
 
-The marketing layout injects a modal after 5 seconds and stores `cynbit_newsletter_seen` in `localStorage` to suppress repeat display. Its form calls `subscribeToNewsletter`. The modal code and action name are in the [layout chunk](../evidence/assets/js/layout-98cfbe01c086f5c9.js).
+The marketing layout injects a modal after 5 seconds and stores `cynbit_newsletter_seen` in `localStorage` to suppress repeat display. Its form calls `subscribeToNewsletter`. The modal code and action name are in the [action extracts](../evidence/assets/extracts/server-actions.txt).
 
 ## Client-side data handling
 
