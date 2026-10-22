@@ -16,9 +16,9 @@ Nine findings, each with raw evidence and a concrete fix.
 
 ## Where to start
 
-1. [`README.md`](README.md) — summary, findings table, what the site does well.
-2. [`findings/`](findings/) — one file per finding; every claim links to a capture.
-3. [`docs/05-recommendations-roadmap.md`](docs/05-recommendations-roadmap.md) —
+1. [`README.md`](README.md): summary, findings table, what the site does well.
+2. [`findings/`](findings/): one file per finding; every claim links to a capture.
+3. [`docs/05-recommendations-roadmap.md`](docs/05-recommendations-roadmap.md):
    what to fix first and what each fix costs.
 
 ## Setup
@@ -34,7 +34,7 @@ Documentation only. No build step, no dependencies, no services required.
 ## Method
 
 All requests were anonymous `GET`/`HEAD` against publicly linked pages, at a
-normal browsing rate — 55 requests over 19 minutes, sequential, no concurrency.
+normal browsing rate: 55 requests over 19 minutes, sequential, no concurrency.
 No scanning, fuzzing, injection, authentication attempt, form submission, load
 test, or access to `/api/`, `/admin/`, or `/portal/` was performed.
 

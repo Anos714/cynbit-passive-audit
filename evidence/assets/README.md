@@ -1,4 +1,4 @@
-# Client bundles — manifest and extracts
+# Client bundles: manifest and extracts
 
 The originals are **not committed**. They are minified third-party build output
 (React/Next.js runtime, Tailwind CSS), they are reproducible in one `curl` each,
@@ -34,7 +34,7 @@ wc -c chunk.js          # 173025
 sha256sum chunk.js      # 5421e13a91a9389517b66179f3b4b5eaa0d95245438066d4d7b19ac30aeb809b
 ```
 
-The hash will only match while this deployment is live — Next.js content-hashes
+The hash will only match while this deployment is live. Next.js content-hashes
 chunk filenames, so a redeploy produces new names and new hashes. That is expected
 and is why the manifest records the observed deployment rather than a stable URL.
 

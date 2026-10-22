@@ -1,4 +1,4 @@
-# PERF-03 — `/careers` is `no-store` and always misses the edge cache
+# PERF-03: `/careers` is `no-store` and always misses the edge cache
 
 | Field | Value |
 |---|---|

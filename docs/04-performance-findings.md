@@ -1,4 +1,4 @@
-# 04 — Performance findings
+# 04: Performance findings
 
 ## Measurement method
 
@@ -17,7 +17,7 @@
 | `/services` | HIT | 1,460,076 s (16.9 d) | 0.963 s | not sampled |
 | `/bitelevate` | HIT | 429,065 s (5.0 d) | 0.262 s | not sampled |
 
-Cold TTFB is dominated by TLS setup on this host, which varied from 0.15 s to 2.43 s, so the cold column does not rank pages reliably — `/careers` looks *faster* than `/` there for that reason alone. The warm sample on a reused connection is the only clean signal: `/careers` (1.108 s and 1.738 s) is roughly **2×** the cached homepage (0.581 s and 0.719 s). Raw data: [`pages.csv`](../evidence/timings/pages.csv), [`warm.csv`](../evidence/timings/warm.csv).
+Cold TTFB is dominated by TLS setup on this host, which varied from 0.15 s to 2.43 s, so the cold column does not rank pages reliably: `/careers` looks *faster* than `/` there for that reason alone. The warm sample on a reused connection is the only clean signal: `/careers` (1.108 s and 1.738 s) is roughly **2×** the cached homepage (0.581 s and 0.719 s). Raw data: [`pages.csv`](../evidence/timings/pages.csv), [`warm.csv`](../evidence/timings/warm.csv).
 
 Rendering signal:
 

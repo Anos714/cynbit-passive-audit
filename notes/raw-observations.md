@@ -79,7 +79,7 @@ Absent on all five pages: CSP, XCTO, Referrer-Policy, Permissions-Policy, X-Fram
 | `/bitelevate` | `public, max-age=0, must-revalidate` | HIT | 429,065 s |
 | `robots.txt` | `public, max-age=0, must-revalidate` | HIT | 512,071 s |
 | `sitemap.xml` | `public, max-age=0, must-revalidate` | MISS | 0 |
-| Hashed JS/CSS | `public, max-age=31536000, immutable` | HIT | — |
+| Hashed JS/CSS | `public, max-age=31536000, immutable` | HIT | n/a |
 
 Conditional request:
 

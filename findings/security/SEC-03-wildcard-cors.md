@@ -1,4 +1,4 @@
-# SEC-03 — Wildcard CORS on HTML documents, inconsistently applied
+# SEC-03: Wildcard CORS on HTML documents, inconsistently applied
 
 | Field | Value |
 |---|---|
@@ -42,7 +42,7 @@ The inconsistency is itself a maintenance signal: there is no single CORS policy
 Remove the wildcard from document responses. Do not replace it with a list of "trusted" marketing origins; documents do not need CORS.
 
 ```ts
-// middleware.ts — only add CORS where an actual cross-origin API is intended
+// middleware.ts: only add CORS where an actual cross-origin API is intended
 import { NextRequest, NextResponse } from 'next/server';
 
 const ALLOWED = new Set(['https://app.example.com']);

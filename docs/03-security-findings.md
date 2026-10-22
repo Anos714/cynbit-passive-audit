@@ -1,4 +1,4 @@
-# 03 — Security findings
+# 03: Security findings
 
 ## Severity rubric
 

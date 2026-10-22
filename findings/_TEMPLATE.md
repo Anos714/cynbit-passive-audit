@@ -1,4 +1,4 @@
-# <ID> — <Title>
+# <ID>: <Title>
 
 | Field | Value |
 |---|---|

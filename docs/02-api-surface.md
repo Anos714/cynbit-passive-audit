@@ -1,4 +1,4 @@
-# 02 — API surface
+# 02: API surface
 
 ## Result
 
@@ -9,8 +9,8 @@ No public REST, GraphQL, or versioned JSON API was found in the downloaded clien
 | HTML routes `/`, `/contact`, `/careers`, `/services`, `/bitelevate` | [headers](../evidence/headers/) | `GET` | Confirmed |
 | `submitInquiry` Server Action | `createServerReference("40abb1a98c0be9294b518c6ca84ffcc8f63f3a5849", …, "submitInquiry")` in [action extracts](../evidence/assets/extracts/server-actions.txt) | Same-origin POST to the contact page with `Next-Action` header (framework behavior); **not invoked** | Confirmed ID; **Strongly inferred** transport |
 | `subscribeToNewsletter` Server Action | `createServerReference("404e55971a25359df792b3be859e08deff64cc9a32", …, "subscribeToNewsletter")` in [action extracts](../evidence/assets/extracts/server-actions.txt) | Same-origin POST to the current marketing page; **not invoked** | Confirmed ID; **Strongly inferred** transport |
-| `/api/*`, `/graphql`, `/v1/*` | No matches in 17 downloaded JS chunks | — | **Confirmed absence in downloaded code**, not a guarantee for the whole deployment |
-| `/admin/`, `/portal/` | Listed in `robots.txt`; not requested | — | Unverified by design |
+| `/api/*`, `/graphql`, `/v1/*` | No matches in 17 downloaded JS chunks | n/a | **Confirmed absence in downloaded code**, not a guarantee for the whole deployment |
+| `/admin/`, `/portal/` | Listed in `robots.txt`; not requested | n/a | Unverified by design |
 
 The action IDs are build-specific. They will change on redeploy; do not treat them as stable API routes.
 

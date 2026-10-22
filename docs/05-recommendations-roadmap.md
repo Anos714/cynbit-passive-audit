@@ -1,4 +1,4 @@
-# 05 — Recommendations and roadmap
+# 05: Recommendations and roadmap
 
 Sequenced by impact per unit of effort. "Now" items are small, reversible config changes. "Next" items need a code change and a test. "Later" items depend on an inventory or a product decision.
 
@@ -18,8 +18,8 @@ Sequenced by impact per unit of effort. "Now" items are small, reversible config
 |---|---|---|---|---|---|
 | 6 | Enforce CSP with a per-request nonce on dynamic routes; use hashes or a build-time policy for static routes | SEC-01 | 1–2 d | Medium | **High** if applied blindly: nonce generation can force static pages to render dynamically and lose edge caching |
 | 7 | Run `@next/bundle-analyzer`; lazy-load below-the-fold client sections; remove animation libraries from the initial layout where possible | PERF-01 | 2–4 d | Medium | Medium; visual regressions and hydration edge cases |
-| 8 | Add a server-side rate limit to both Server Actions with `429` + `Retry-After` (see snippet) | [SEC-04](../findings/security/SEC-04-server-actions-abuse-surface.md) — abuse half | 4–8 h | Medium | Low–Medium; NAT/shared-IP false positives |
-| 9 | Add strict server-side schema validation to `submitInquiry` and `subscribeToNewsletter` | [SEC-04](../findings/security/SEC-04-server-actions-abuse-surface.md) — validation half | 2–4 h | Medium | Low; must preserve the existing field names |
+| 8 | Add a server-side rate limit to both Server Actions with `429` + `Retry-After` (see snippet) | [SEC-04](../findings/security/SEC-04-server-actions-abuse-surface.md) (abuse half) | 4–8 h | Medium | Low–Medium; NAT/shared-IP false positives |
+| 9 | Add strict server-side schema validation to `submitInquiry` and `subscribeToNewsletter` | [SEC-04](../findings/security/SEC-04-server-actions-abuse-surface.md) (validation half) | 2–4 h | Medium | Low; must preserve the existing field names |
 | 10 | Add `includeSubDomains` to HSTS, then submit to the preload list after a subdomain inventory | SEC-02 | 1 h + waiting period | Low | **High** if any subdomain is HTTP-only; can make it unreachable |
 
 ## Later
@@ -28,7 +28,7 @@ Sequenced by impact per unit of effort. "Now" items are small, reversible config
 |---|---|---|---|---|---|
 | 11 | Replace request-time `lastmod` with per-entry `updatedAt` from the CMS/content source; add ISR to `sitemap.xml` | PERF-04 | 2–4 h | Low | Low |
 | 12 | Add a documented vulnerability-disclosure contact (`security.txt`) and an on-call mailbox | Process | 1 h | Low | Low |
-| 13 | Re-measure TTFB and cache hit ratio from a real-user monitoring source, not a single `curl` host | Measurement | 1 d | — | Low |
+| 13 | Re-measure TTFB and cache hit ratio from a real-user monitoring source, not a single `curl` host | Measurement | 1 d | n/a | Low |
 
 ## Trade-offs
 

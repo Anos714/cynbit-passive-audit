@@ -1,11 +1,11 @@
-# 06 — Limitations
+# 06: Limitations
 
 ## What this method cannot see
 
 1. **Server code and validation.** The contact form was not submitted and the Server Action was not invoked. Whether `submitInquiry` validates length, type, or content server-side is unknown. A strict schema is recommended, not proven missing.
 2. **Rate limiting.** A server-side limiter is invisible to anonymous `GET` requests. The report labels the abuse-control concern a hypothesis and does not claim the endpoint is unthrottled.
 3. **Authentication and authorization.** No login or admin surface was found or tested. `/admin/` and `/portal/` are listed in `robots.txt`; they were not requested.
-4. **Data layer.** The database, CRM, email provider, and any queues are not exposed in public headers or client code. The architecture diagram stops at "data layer — not observable."
+4. **Data layer.** The database, CRM, email provider, and any queues are not exposed in public headers or client code. The architecture diagram stops at "data layer (not observable)."
 5. **Runtime vulnerabilities.** No dependency scanner, version fingerprinting, or exploit test was run. Next.js/React versions are not asserted.
 6. **WAF and bot protection.** A `403` on a source map and normal 404s do not prove a WAF. No payloads were sent, so rules cannot be characterized.
 7. **Real-user performance.** TTFB comes from one host on one network path. TLS setup varied by more than 2 seconds, and the warm sample is only two requests per page. Field data (CrUX/RUM) would be needed to rank pages for users.

@@ -1,4 +1,4 @@
-# PERF-04 — Sitemap `lastmod` is request time for 16 static URLs
+# PERF-04: Sitemap `lastmod` is request time for 16 static URLs
 
 | Field | Value |
 |---|---|

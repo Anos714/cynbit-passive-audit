@@ -1,4 +1,4 @@
-# TLS and DNS observations — 2026-10-22
+# TLS and DNS observations: 2026-10-22
 
 Commands (passive TLS handshake and name resolution only):
 

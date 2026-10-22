@@ -1,4 +1,4 @@
-# Passive backend audit — cynbit.in
+# Passive backend audit: cynbit.in
 
 **Target:** `https://www.cynbit.in` (apex `https://cynbit.in` redirects to `www`)
 **Date:** 2026-10-22 (UTC)

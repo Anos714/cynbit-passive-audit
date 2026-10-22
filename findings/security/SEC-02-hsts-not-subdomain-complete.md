@@ -1,4 +1,4 @@
-# SEC-02 — HSTS lacks `includeSubDomains` and `preload`
+# SEC-02: HSTS lacks `includeSubDomains` and `preload`
 
 | Field | Value |
 |---|---|

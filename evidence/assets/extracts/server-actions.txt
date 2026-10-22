@@ -2,12 +2,12 @@
 
 Source: publicly served Next.js chunks, captured 2026-10-22.
 Original files: `js/contact-page.js` (24,534 B) and
-`js/layout-98cfbe01c086f5c9.js` (26,611 B) — see
+`js/layout-98cfbe01c086f5c9.js` (26,611 B); see
 [`../MANIFEST.csv`](../MANIFEST.csv).
 
 ---
 
-## 1. Contact form — `submitInquiry`
+## 1. Contact form: `submitInquiry`
 
 File: `contact-page.js`
 
@@ -33,7 +33,7 @@ d = async e => {
 
 ---
 
-## 2. Newsletter modal — `subscribeToNewsletter`
+## 2. Newsletter modal: `subscribeToNewsletter`
 
 File: `layout-98cfbe01c086f5c9.js`
 
@@ -50,7 +50,7 @@ The modal is injected after a delay and suppressed on repeat visits via
 
 ## 3. Why these lines matter
 
-The action ID is public by design — Next.js serialises it into the client bundle
+The action ID is public by design. Next.js serialises it into the client bundle
 so the browser can address the action. Its presence is **not** a vulnerability.
 What it establishes is narrower and still useful: both mutations are reachable as
 same-origin `POST`s without loading the page, so validation and throttling must be

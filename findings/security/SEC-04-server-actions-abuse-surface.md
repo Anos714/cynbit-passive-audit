@@ -1,4 +1,4 @@
-# SEC-04 — Two public Server Actions, abuse controls unverified
+# SEC-04: Two public Server Actions, abuse controls unverified
 
 | Field | Value |
 |---|---|
@@ -19,7 +19,7 @@ IDs are readable in the downloaded bundles:
 createServerReference("40abb1a98c0be9294b518c6ca84ffcc8f63f3a5849",
   callServer, undefined, findSourceMapURL, "submitInquiry");
 
-// marketing layout chunk — newsletter modal
+// marketing layout chunk (newsletter modal)
 createServerReference("404e55971a25359df792b3be859e08deff64cc9a32",
   callServer, undefined, findSourceMapURL, "subscribeToNewsletter");
 ```
@@ -45,7 +45,7 @@ defect.
 ## Why it matters
 
 Server Actions are same-origin `POST` requests with a stable, public action ID.
-That is by design — the ID is not a secret, and its presence is not a
+That is by design: the ID is not a secret, and its presence is not a
 vulnerability. But it does mean the endpoint is reachable by anything that can
 read the bundle, with no page load and no browser required.
 
@@ -61,7 +61,7 @@ Two controls decide whether that matters:
    API quota. The cost is operational: real leads get lost in noise.
 
 Next.js 14+ compares `Origin` against `Host` for Server Actions, which blocks the
-classic cross-site form post. That is CSRF protection, not abuse protection — a
+classic cross-site form post. That is CSRF protection, not abuse protection; a
 scripted client sets its own headers and is unaffected.
 
 The newsletter action has the same shape and is reachable from every marketing
@@ -115,7 +115,7 @@ const key = `inquiry:${req.ip}`;
 Reference: [`snippets/lib/rate-limit.ts`](../../snippets/lib/rate-limit.ts).
 
 **3. Add a honeypot and a minimum time-on-form check.** Together they stop most
-bots without a captcha. Add Turnstile only if abuse continues — a captcha costs
+bots without a captcha. Add Turnstile only if abuse continues, since a captcha costs
 real conversions.
 
 **Why this order:** validation prevents bad data, throttling prevents volume, the
@@ -135,5 +135,5 @@ Each step is active and must not be run without explicit permission.
 
 - **Effort:** 2–4 h for schema + throttle; 1 h for the honeypot
 - **Risk:** Low. The main risk is a honeypot that autofill fills, silently blocking
-  real users — hide it with CSS rather than `display:none` alone, and test with a
+  real users. Hide it with CSS rather than `display:none` alone, and test with a
   password manager.

@@ -1,4 +1,4 @@
-# PERF-01 — Homepage ships 597 KB of decoded JavaScript on the modern path
+# PERF-01: Homepage ships 597 KB of decoded JavaScript on the modern path
 
 | Field | Value |
 |---|---|

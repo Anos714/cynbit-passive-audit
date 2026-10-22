@@ -1,4 +1,4 @@
-# PERF-05 — Render-blocking Google Fonts CSS and early GTM preload
+# PERF-05: Render-blocking Google Fonts CSS and early GTM preload
 
 | Field | Value |
 |---|---|

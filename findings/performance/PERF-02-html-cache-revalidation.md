@@ -1,4 +1,4 @@
-# PERF-02 — Prerendered HTML revalidates every navigation while edge copies age for days
+# PERF-02: Prerendered HTML revalidates every navigation while edge copies age for days
 
 | Field | Value |
 |---|---|

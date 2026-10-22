@@ -1,4 +1,4 @@
-# SEC-01 — No CSP and no complementary browser-isolation headers
+# SEC-01: No CSP and no complementary browser-isolation headers
 
 | Field | Value |
 |---|---|
