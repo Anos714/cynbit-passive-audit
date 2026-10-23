@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | Severity | **Info** (would become High if throttling and validation are both absent) |
-| Confidence | **Confirmed** (action IDs) / **Hypothesis** (transport, abuse controls) |
+| Confidence | **Confirmed** (action IDs) / **Strongly inferred** (transport) / **Hypothesis** (abuse controls) |
 | Area | Authentication / input validation / abuse resistance |
 | Affected URL | `/contact` (`submitInquiry`), all marketing pages (`subscribeToNewsletter`) |
 | Date | 2026-10-22 |
@@ -44,7 +44,7 @@ defect.
 
 ## Why it matters
 
-Server Actions are same-origin `POST` requests with a stable, public action ID.
+Server Actions are same-origin `POST` requests with a public action ID.
 That is by design: the ID is not a secret, and its presence is not a
 vulnerability. But it does mean the endpoint is reachable by anything that can
 read the bundle, with no page load and no browser required.
