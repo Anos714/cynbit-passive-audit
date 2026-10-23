@@ -27,7 +27,7 @@ npm i @upstash/redis zod
 
 1. **Nonce CSP and static pages.** A nonce must be in the HTML. If the page is fully prerendered, a per-request nonce can force dynamic rendering. Start with `Content-Security-Policy-Report-Only`; enforce on the dynamic form routes first. For static routes, consider build-time hashes instead of a nonce.
 2. **`style-src 'unsafe-inline'`.** Next.js and Tailwind emit inline style attributes. Removing this directive requires a separate `style-src-attr` rollout and may break the UI. Keep it initially and document it.
-3. **Redis dependency.** A rate limiter in a serverless function must be shared. An in-memory `Map` is not a control. Upstash adds a network round trip per submission; at 5 requests/minute that is acceptable.
+3. **Redis dependency.** A rate limiter in a serverless function must be shared. An in-memory `Map` is not a control. Upstash adds a network round trip per submission; at 5 requests per 10 minutes that is acceptable.
 4. **IP trust.** `x-real-ip` is used because Vercel sets it. Do not trust `X-Forwarded-For` from an arbitrary client unless a trusted proxy overwrites it.
 5. **Route handler vs Server Action.** The live form uses a Server Action. The reference route handler shows the HTTP semantics (`429`, `Retry-After`) clearly. If you keep the action, reuse the same helpers and return a structured error object; the client must translate it into a visible retry message.
 

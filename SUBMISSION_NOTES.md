@@ -29,7 +29,7 @@ Documentation only. No build step, no dependencies, no services required.
   by GitHub.
 - Snippets under [`snippets/`](snippets/) are TypeScript/Next.js reference code
   for reading. They are not wired into a build.
-- Captures under [`evidence/`](evidence/) are plain text, HTML, CSV, and the bundle manifest.
+- Captures under [`evidence/`](evidence/) are plain text, HTML, CSV, PNG screenshots, and the bundle manifest.
 
 ## Method
 

@@ -47,13 +47,13 @@ No POST, PUT, PATCH, or DELETE was sent. No form was submitted. No Server Action
 - Raw HTML, `robots.txt`, `sitemap.xml`, and the 404 body are in [`evidence/raw/`](../evidence/raw/).
 - Bundle sizes, hashes, and the two Server Action extracts are in [`evidence/assets/`](../evidence/assets/); response headers for each bundle are in [`evidence/headers/assets/`](../evidence/headers/assets/). Originals are not committed; reproduce them from the hashes in the manifest.
 - Timing CSVs are in [`evidence/timings/`](../evidence/timings/).
-- Page renders and two DevTools header captures are in [`evidence/screenshots/`](../evidence/screenshots/). They are context; header and timing claims rely on the text captures.
+- A page render and two DevTools header captures are in [`evidence/screenshots/`](../evidence/screenshots/). They are supplementary context; header and timing claims rely on the text captures.
 - TLS and DNS observations are in [`evidence/tls/README.md`](../evidence/tls/README.md).
-- No cookies were set on any response. No PII, credentials, or session tokens were collected. The site's public business phone/address in JSON-LD was not reproduced because it is unnecessary for the findings.
+- No cookies were set on any response. No personal data, credentials, or session tokens were collected. The site's public business phone numbers were replaced with placeholders; the published office address remains in the captures because it is public business information and no finding relies on it.
 
 ## Measurement caveats
 
-`curl`'s `time_starttransfer` includes DNS, TCP, and TLS setup for a new connection. The host's TLS handshakes varied from **0.15 s to 2.43 s**, which dominates cold-connect TTFB. To avoid attributing network variance to the origin, the report also computes:
+`curl`'s `time_starttransfer` includes DNS, TCP, and TLS setup for a new connection. The host's TLS handshakes varied from **0.15 s to 1.83 s**, which dominates cold-connect TTFB. To avoid attributing network variance to the origin, the report also computes:
 
 ```text
 origin_response_after_tls = time_starttransfer - time_appconnect

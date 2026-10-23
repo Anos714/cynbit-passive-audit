@@ -3,8 +3,8 @@
 //
 // The current HTML only has `required` and `type=email`. That is a UX hint,
 // not validation: a direct POST can omit or ignore it. Parse a fresh object
-// from FormData so framework-injected fields (for example $ACTION_ID_*) are
-// not rejected by .strict().
+// from FormData so framework-injected fields (for example $ACTION_ID_*) never
+// reach the schema and are not persisted.
 //
 // Install:
 //   npm i zod

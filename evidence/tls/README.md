@@ -53,6 +53,6 @@ www.cynbit.in -> 216.198.79.65, 64.29.17.65
 cynbit.in     -> 216.198.79.1
 ```
 
-No port scan or service enumeration was performed. Only 443 was contacted because that is the published HTTPS origin.
+No port scan or service enumeration was performed. TLS was tested only on 443; one plain HTTP request to port 80 was made separately to confirm the redirect.
 
-No personal data is included. Public business contact details in other captures were replaced with equal-length placeholders; see [`notes/raw-observations.md`](../../notes/raw-observations.md#redaction-note).
+No personal data is included. Public business email addresses and phone numbers in other captures were replaced with equal-length placeholders; the published office address remains because it is public business information. See [`notes/raw-observations.md`](../../notes/raw-observations.md#redaction-note).

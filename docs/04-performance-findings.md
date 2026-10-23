@@ -4,7 +4,7 @@
 
 - Three cold-connection `GET`s per page, sequential, 3 s apart. `time_starttransfer` (TTFB) and `time_appconnect` were recorded.
 - Two warm `GET`s per page on a reused connection for the two pages that mattered (`/` and `/careers`).
-- Decoded bundle size is `stat` size after `curl --compressed`; transfer size is `curl`'s `size_download` (Brotli-compressed bytes).
+- Decoded bundle size is `stat` size after `curl --compressed`; transfer size is `curl`'s `size_download` (wire bytes, Brotli where negotiated).
 - No synthetic throttling, no Lighthouse, no load test. Numbers are one vantage point, not a field-data claim.
 
 ## Page timings
@@ -17,7 +17,7 @@
 | `/services` | HIT | 1,460,076 s (16.9 d) | 0.963 s | not sampled |
 | `/bitelevate` | HIT | 429,065 s (5.0 d) | 0.262 s | not sampled |
 
-Cold TTFB is dominated by TLS setup on this host, which varied from 0.15 s to 2.43 s, so the cold column does not rank pages reliably: `/careers` looks *faster* than `/` there for that reason alone. The warm sample on a reused connection is the only clean signal: `/careers` (1.108 s and 1.738 s) is roughly **2×** the cached homepage (0.581 s and 0.719 s). Raw data: [`pages.csv`](../evidence/timings/pages.csv), [`warm.csv`](../evidence/timings/warm.csv).
+Cold TTFB is dominated by TLS setup on this host, which varied from 0.15 s to 1.83 s, so the cold column does not rank pages reliably: `/careers` looks *faster* than `/` there for that reason alone. The warm sample on a reused connection is the only clean signal: `/careers` (1.108 s and 1.738 s) is roughly **2×** the cached homepage (0.581 s and 0.719 s). Raw data: [`pages.csv`](../evidence/timings/pages.csv), [`warm.csv`](../evidence/timings/warm.csv).
 
 Rendering signal:
 
@@ -80,7 +80,7 @@ The font stylesheet is a render-blocking cross-origin request. GTM is preloaded 
 
 | ID | Finding | Severity |
 |---|---|---|
-| [PERF-01](../findings/performance/PERF-01-client-payload.md) | 597 KB modern-path JS; 177 KB CSS | Medium |
+| [PERF-01](../findings/performance/PERF-01-client-payload.md) | 597 KB modern-path JS; 181 KB CSS | Medium |
 | [PERF-02](../findings/performance/PERF-02-html-cache-revalidation.md) | Prerendered HTML revalidates every navigation; edge copy ages for days | Medium |
 | [PERF-03](../findings/performance/PERF-03-careers-uncached.md) | `/careers` is `no-store` and always misses the edge | Medium |
 | [PERF-04](../findings/performance/PERF-04-sitemap-lastmod.md) | Sitemap `lastmod` is request time for 16 static URLs | Low |

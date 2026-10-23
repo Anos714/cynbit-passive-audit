@@ -11,7 +11,7 @@
 
 ## What I observed
 
-Every HTTPS response captured includes HSTS, including the apex redirect and the 404:
+Every full HTTPS response captured includes HSTS, including the apex redirect and the 404; the one `304 Not Modified` revalidation omitted it ([capture](../../evidence/headers/conditional_home.txt)).
 
 ```http
 strict-transport-security: max-age=63072000

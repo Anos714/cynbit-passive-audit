@@ -38,13 +38,13 @@ The accessible application is a marketing site. No login, payment, account, admi
 | `x-powered-by` | absent | `Next.js` | `Next.js` | absent | `Next.js` |
 | `set-cookie` | absent | absent | absent | absent | absent |
 
-Evidence: [`evidence/headers/`](../evidence/headers/). The table is a direct transcription of the `run1` captures; `run2`/`run3` agree on cache status and security headers. `X-XSS-Protection` is absent and intentionally not recommended: modern browsers ignore it, and a malformed legacy filter can introduce issues. CSP is the replacement, not a revival of that header.
+Evidence: [`evidence/headers/`](../evidence/headers/). The table is a direct transcription of the `run1` captures; `run2`/`run3` agree on cache status and security headers. The `/careers` `103 Early Hints` response carries `Referrer-Policy`, but the final `200` does not; the matrix reflects final responses. `X-XSS-Protection` is absent and intentionally not recommended: modern browsers ignore it, and a malformed legacy filter can introduce issues. CSP is the replacement, not a revival of that header.
 
 `x-powered-by` is inconsistent across routes, which suggests route-level header handling rather than a single global policy. It is not a finding on its own; it is context for SEC-01. `server: Vercel` and `x-vercel-id` disclose the platform and an edge/function chain; this is normal for the hosting model and is not scored as a vulnerability. The only application-framework disclosure is `x-powered-by: Next.js` on three routes, which is low-value fingerprinting and is removed by `poweredByHeader: false`. The `Vary` header does not include `Origin`, which is correct while CORS is wildcard or absent, but would need to change if an origin allowlist is introduced.
 
 ## Positive controls in the same area
 
-- HSTS is present on every response, including 404 and source-map 403 responses.
+- HSTS is present on every full HTTPS response, including the 404 and source-map 403 responses. The 304 revalidation was the one exception.
 - No cookies are set, so there is no session cookie to mis-scope.
 - Source maps are blocked (`403`) rather than publicly served.
 - The 404 response is a real 404, not a soft 200.

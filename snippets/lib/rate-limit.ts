@@ -31,7 +31,7 @@ async function digest(value: string): Promise<string> {
 export async function rateLimit(
   identifier: string,
   limit = 5,
-  windowSeconds = 60,
+  windowSeconds = 600,
 ): Promise<RateLimitResult> {
   if (limit < 1 || windowSeconds < 1) {
     throw new Error('limit and windowSeconds must be positive');

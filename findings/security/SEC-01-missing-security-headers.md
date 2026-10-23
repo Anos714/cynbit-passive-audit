@@ -11,7 +11,7 @@
 
 ## What I observed
 
-The response headers contain no `Content-Security-Policy` on any of the five HTML routes. There is also no `<meta http-equiv="Content-Security-Policy">` in the homepage HTML. The same responses omit `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`, `X-Frame-Options`, `Cross-Origin-Opener-Policy`, and `Cross-Origin-Resource-Policy`.
+The final response headers contain no `Content-Security-Policy` on any of the five HTML routes. There is also no `<meta http-equiv="Content-Security-Policy">` in the homepage HTML. The same responses omit `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`, `X-Frame-Options`, `Cross-Origin-Opener-Policy`, and `Cross-Origin-Resource-Policy`. The `/careers` DevTools capture shows `Referrer-Policy: strict-origin-when-cross-origin` only in a `103 Early Hints` block; the final `200` response does not carry the header. See the [careers capture](../../evidence/screenshots/careers-response-headers.png).
 
 Relevant lines from the homepage capture:
 

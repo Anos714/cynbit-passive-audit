@@ -28,7 +28,7 @@ There was no `x-nextjs-prerender` header and `age` was `0` on every run. Warm-co
 
 Every `/careers` visit invokes the Next.js runtime and rebuilds the page, even when the job list has not changed. That is the slowest observed route on a warm connection and the only route that does not benefit from the edge cache. At normal traffic this is wasted compute; during a hiring campaign it is the page most likely to receive a burst.
 
-The 5-second job-data freshness trade-off is preferable to a full origin render on every request.
+The 5-minute job-data freshness trade-off is preferable to a full origin render on every request.
 
 ## Root cause
 

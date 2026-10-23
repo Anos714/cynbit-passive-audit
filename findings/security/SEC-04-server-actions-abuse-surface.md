@@ -78,7 +78,7 @@ route handler.
 
 Three controls, in the order I would ship them:
 
-**1. Strict server-side schema, unknown keys rejected.**
+**1. Strict server-side schema; only known fields are read.**
 
 ```ts
 // app/actions/submit-inquiry.ts
@@ -87,15 +87,23 @@ Three controls, in the order I would ship them:
 import { z } from "zod";
 
 const Inquiry = z.object({
-  fullName: z.string().trim().min(2).max(80),
+  fullName: z.string().trim().min(2).max(100),
   email: z.string().trim().toLowerCase().email().max(254),
   company: z.string().trim().max(120).optional(),
-  industry: z.string().trim().max(80).optional(),
-  message: z.string().trim().min(10).max(2000),
-}).strict(); // unknown fields are an error, not silently persisted
+  industry: z.string().trim().max(120).optional(),
+  message: z.string().trim().min(10).max(5000),
+}).strict(); // no pass-through fields
 
 export async function submitInquiry(formData: FormData) {
-  const parsed = Inquiry.safeParse(Object.fromEntries(formData));
+  // Read known fields explicitly. Do not spread Object.fromEntries(formData):
+  // Server Actions also carry framework fields such as $ACTION_ID_*.
+  const parsed = Inquiry.safeParse({
+    fullName: formData.get("fullName"),
+    email: formData.get("email"),
+    company: formData.get("company") || undefined,
+    industry: formData.get("industry") || undefined,
+    message: formData.get("message"),
+  });
   if (!parsed.success) return { success: false, error: "VALIDATION" };
   // ... send / persist using parsed.data only
 }

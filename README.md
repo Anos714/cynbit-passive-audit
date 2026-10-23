@@ -37,8 +37,8 @@ Severity is scoped to the observed configuration. No authentication, payment flo
 ## What the site does correctly
 
 1. **TLS 1.3 with valid, host-specific certificates.** `www` negotiates TLS 1.3; both `www` and apex present a Let's Encrypt certificate with a matching SAN, and both verify with return code 0. [TLS evidence](evidence/tls/README.md)
-2. **HSTS is present with a two-year max-age.** `strict-transport-security: max-age=63072000` on every HTTPS response captured, including errors. [example](evidence/headers/home_run1.txt)
-3. **Hashed static assets are immutable and edge-cached.** All 18 homepage JS/CSS responses returned `cache-control: public, max-age=31536000, immutable`, `content-encoding: br`, and `x-vercel-cache: HIT`. [asset timings](evidence/timings/assets.csv)
+2. **HSTS is present with a two-year max-age.** `strict-transport-security: max-age=63072000` appears on every full HTTPS response captured, including the 404 and the 403; the single `304 Not Modified` response omitted it. [example](evidence/headers/home_run1.txt)
+3. **Hashed static assets are immutable and edge-cached.** All 18 homepage JS/CSS responses returned `cache-control: public, max-age=31536000, immutable` and `x-vercel-cache: HIT`; the 16 larger responses were Brotli-encoded, while two sub-1 KB chunks were sent uncompressed. [asset timings](evidence/timings/assets.csv)
 4. **ETag revalidation works.** A conditional GET with the homepage ETag returned `304` with no body. [304 capture](evidence/headers/conditional_home.txt)
 5. **404 and source-map behavior is correct.** A non-existent URL returned a real `404` with a custom body; a public chunk's `.js.map` returned `403`, not the map. [404 headers](evidence/headers/404.txt), [map headers](evidence/headers/source_map.txt)
 6. **No secrets or REST endpoints in the downloaded client code.** No `/api/`, `/graphql`, `/v1`, `NEXT_PUBLIC_*`, bearer tokens, or cloud keys were found in the 16 homepage chunks or the contact chunk. The only credential-like storage is a localStorage flag for a newsletter modal (`cynbit_newsletter_seen`), not a session token.

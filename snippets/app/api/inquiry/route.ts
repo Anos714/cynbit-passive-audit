@@ -35,7 +35,7 @@ export async function POST(request: NextRequest) {
   }
 
   try {
-    const limit = await rateLimit(`inquiry:${ip}`, 5, 60);
+    const limit = await rateLimit(`inquiry:${ip}`, 5, 600);
     if (!limit.ok) {
       return jsonError({
         code: 'RATE_LIMITED',

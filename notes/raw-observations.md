@@ -29,7 +29,7 @@ Approximate total: **52 HTTP requests over 19 minutes**. The three-run timing sa
 
 ## Supplementary DevTools captures
 
-Two screenshots were taken later the same day, at 15:30 and 15:33 UTC, to make the header claims visible without a terminal: the homepage response headers and the `/careers` response headers. They show the same values as `headers/home_run1.txt` and `headers/careers_run1.txt`. They are not part of the 55-request sample.
+Two screenshots were taken later the same day, at 21:02 and 21:04 IST (15:32 and 15:34 UTC), to make the header claims visible without a terminal: the homepage response headers and the `/careers` response headers. They show the same security and cache values as `headers/home_run1.txt` and `headers/careers_run1.txt`; the homepage `age` is larger because they were taken later. They are not part of the 52-request sample.
 
 ## Host and redirect behavior
 
@@ -143,7 +143,7 @@ Modern path total: **597,497 B decoded / 186,310 B Brotli**. All 16 including po
 
 Contact-only chunk: `app/(marketing)/contact/page-c119...js`, **24,534 B decoded / 6,284 B transfer**.
 
-All assets: `cache-control: public, max-age=31536000, immutable`, `content-encoding: br`, `x-vercel-cache: HIT`.
+All assets: `cache-control: public, max-age=31536000, immutable`, `x-vercel-cache: HIT`. 17 of 19 were Brotli-encoded; the two sub-1 KB chunks were sent uncompressed.
 
 ## Bundle search
 
@@ -184,7 +184,7 @@ See [`tls/README.md`](../evidence/tls/README.md). Summary: separate Let's Encryp
 
 ## Redaction note
 
-Public business email addresses and phone numbers embedded in the captured HTML and JavaScript were replaced with equal-length placeholders before committing, so the decoded byte counts in the report still match the captured files. The redaction does not affect any finding: no finding relies on contact details. Placeholder addresses such as `alex@example.com` in form markup were left as-is because they are sample input, not real contact data.
+Public business email addresses and phone numbers embedded in the captured HTML and JavaScript were replaced with equal-length placeholders before committing, so the decoded byte counts in the report still match the captured files. The published office address remains because it is public business information, not personal data, and no finding relies on it. Placeholder addresses such as `alex@example.com` in form markup were left as-is because they are sample input, not real contact data.
 
 ## Capture normalization note
 

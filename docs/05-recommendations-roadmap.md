@@ -36,7 +36,7 @@ Sequenced by impact per unit of effort. "Now" items are small, reversible config
 2. **Longer `s-maxage` vs content freshness.** The homepage HTML was 17.1 days old at the edge. Extending shared caching reduces origin work but makes an urgent content change (phone number, job closure, legal copy) wait for a purge. Pair any longer TTL with on-demand revalidation or a deploy hook.
 3. **`includeSubDomains` vs subdomain availability.** HSTS with `includeSubDomains` is stronger, but if any internal or legacy subdomain still serves HTTP, browsers will refuse to downgrade and may make it unreachable. Inventory first; do not enable it blind.
 4. **Removing client JavaScript vs interaction quality.** The page uses client components for navigation, animation, and the newsletter modal. Cutting bundle size by removing those can change the experience. Measure with the bundle analyzer and lazy-load below-the-fold components before deleting features.
-5. **IP rate limiting vs shared NAT.** A 5/minute IP limit can block a whole office or a university NAT. Combine per-IP limits with per-email/per-domain limits, and return a clear `Retry-After` rather than a generic failure.
+5. **IP rate limiting vs shared NAT.** A 5-per-10-minute IP limit can block a whole office or a university NAT. Combine per-IP limits with per-email/per-domain limits, and return a clear `Retry-After` rather than a generic failure.
 
 ## Implementation order that keeps the site shippable
 
