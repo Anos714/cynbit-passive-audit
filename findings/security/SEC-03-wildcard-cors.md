@@ -7,7 +7,7 @@
 | Area | Security architecture / CORS |
 | Affected URL | `/` and `/services` (observed); absent on `/contact`, `/careers`, `/bitelevate` |
 | Date | 2026-10-22 |
-| Evidence | [home headers](../../evidence/headers/home_run1.txt), [services headers](../../evidence/headers/services_run1.txt), [contact headers](../../evidence/headers/contact_run1.txt), [OPTIONS capture](../../evidence/headers/options_home.txt) |
+| Evidence | [home headers](../../evidence/headers/home_run1.txt), [services headers](../../evidence/headers/services_run1.txt), [contact headers](../../evidence/headers/contact_run1.txt), [OPTIONS capture](../../evidence/headers/options_home.txt), [DevTools capture](../../evidence/screenshots/home-response-headers.png) |
 
 ## What I observed
 
