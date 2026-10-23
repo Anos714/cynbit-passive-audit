@@ -9,21 +9,24 @@ Evaluate the publicly observable backend and delivery configuration of `https://
 - Date: **2026-10-22**, approximately **13:04–13:23 UTC**.
 - Client: a Linux host running `curl` 8.x, OpenSSL 3.x, and Firefox headless. No browser automation profile, cookies, or authenticated session was used.
 - All HTTP requests were anonymous, sequential, and made without concurrency. Timing samples used three sequential runs per page with 3-second spacing; asset downloads used 2-second spacing.
-- Approximate volume: **55 HTTP requests over ~19 minutes**, averaging under 3 requests/minute. This includes timing repeats, 17 bundle downloads, one conditional request, one source-map request, and one 404 request. No request was sent to `/api/`, `/admin/`, `/portal/`, or any path not listed below.
+- Approximate volume: **52 HTTP requests over ~19 minutes**, averaging under 3 requests/minute. This includes timing repeats, 19 asset downloads (17 JS, 2 CSS), one conditional request, one source-map request, and one 404 request. No request was sent to `/api/`, `/admin/`, `/portal/`, or any path not listed below.
 - The exact request list is in [raw observations](../notes/raw-observations.md#request-log).
 
 ## Allowed actions actually performed
 
 | Action | Count | Notes |
 |---|---:|---|
-| Anonymous `GET` to public pages | 15 | `/`, `/contact`, `/careers`, `/services`, `/bitelevate`; three runs each |
+| Anonymous `GET` to public pages | 16 | Initial load plus three runs each across five routes |
 | Anonymous `GET` to public JS/CSS | 19 | 16 homepage JS + 1 contact JS + 2 CSS; response headers for each |
 | `HEAD`/`GET` to `robots.txt`, `sitemap.xml` | 2 | Public crawler files |
 | `GET` to one non-existent URL | 1 | `404` behavior |
 | Conditional `GET` with `If-None-Match` | 1 | Homepage ETag; observed `304` |
 | `GET` to one `.js.map` | 1 | Already-public chunk; observed `403` |
-| TLS handshakes / DNS resolutions | 4 / 2 | No port scan; only 443 |
 | `OPTIONS` to `/` | 1 | Observed `204` and CORS methods |
+| Apex redirect checks | 6 | Five `https://cynbit.in/` (`307`) and one `http://cynbit.in/` (`308`) |
+| Timing samples | 5 | Four on a reused connection; one new-connection baseline |
+
+TLS handshakes and DNS lookups are not counted in the table.
 
 No POST, PUT, PATCH, or DELETE was sent. No form was submitted. No Server Action was invoked. No authentication, fuzzing, injection, directory discovery, or load test was performed.
 

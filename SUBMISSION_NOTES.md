@@ -34,7 +34,7 @@ Documentation only. No build step, no dependencies, no services required.
 ## Method
 
 All requests were anonymous `GET`/`HEAD` against publicly linked pages, at a
-normal browsing rate: 55 requests over 19 minutes, sequential, no concurrency.
+normal browsing rate: 52 requests over 19 minutes, sequential, no concurrency.
 No scanning, fuzzing, injection, authentication attempt, form submission, load
 test, or access to `/api/`, `/admin/`, or `/portal/` was performed.
 

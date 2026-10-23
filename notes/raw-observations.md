@@ -16,7 +16,7 @@ All requests were anonymous and sequential. No POST, no form submission.
 | 13:04:56 | `GET /this-page-should-not-exist-xyz` | `404`, `x-next-error-status: 404` | `headers/404.txt`, `raw/404.html` |
 | 13:04:59 | `OPTIONS /` | `204` | `headers/options_home.txt` |
 | 13:05–13:07 | 3 × `GET` each: `/`, `/contact`, `/careers`, `/services`, `/bitelevate` | `200` each | `headers/*_run*.txt`, `raw/*_run1.html` (runs 2–3 were byte-identical and are not retained), `timings/pages.csv` |
-| 13:07–13:12 | 16 homepage JS + 2 CSS + contact page JS | `200` each | `assets/`, `headers/assets/`, `timings/assets.csv` |
+| 13:07–13:12 | 16 homepage JS + 2 CSS + contact page JS | `200` each | `headers/assets/` for all 19; `timings/assets.csv` covers the 18 homepage assets; contact chunk size is in the bundle inventory |
 | 13:18:19 | `GET .../webpack-13fd2c27c7c4c378.js.map` | `403`, `x-robots-tag: noindex` | `headers/source_map.txt` |
 | 13:18:23 | `GET /` with `If-None-Match: W/"eb276f..."` | `304` | `headers/conditional_home.txt` |
 | 13:18:26–13:18:32 | 3 × `GET https://cynbit.in/` | `307` each | `headers/apex_run1..3.txt` |
@@ -25,7 +25,7 @@ All requests were anonymous and sequential. No POST, no form submission.
 | 13:20–13:22 | Warm-connection timing samples (`/`, `/careers`) | `200` | `timings/warm.csv` |
 | 13:23 | Headless Firefox screenshot attempt | no file produced (default profile was locked); a later retry with a fresh profile succeeded | `screenshots/README.md` |
 
-Approximate total: **55 HTTP requests over 19 minutes**. The three-run timing samples are bursts of three with 3-second spacing; there are no concurrent requests. The screenshot retry happened later and is not part of this window or the timing sample.
+Approximate total: **52 HTTP requests over 19 minutes**. The three-run timing samples are bursts of three with 3-second spacing; there are no concurrent requests. The screenshot retry happened later and is not part of this window or the timing sample.
 
 ## Supplementary DevTools captures
 
