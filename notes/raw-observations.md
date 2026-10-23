@@ -27,6 +27,10 @@ All requests were anonymous and sequential. No POST, no form submission.
 
 Approximate total: **55 HTTP requests over 19 minutes**. The three-run timing samples are bursts of three with 3-second spacing; there are no concurrent requests. The screenshot retry happened later and is not part of this window or the timing sample.
 
+## Supplementary DevTools captures
+
+Two screenshots were taken later the same day, at 15:30 and 15:33 UTC, to make the header claims visible without a terminal: the homepage response headers and the `/careers` response headers. They show the same values as `headers/home_run1.txt` and `headers/careers_run1.txt`. They are not part of the 55-request sample.
+
 ## Host and redirect behavior
 
 Apex:

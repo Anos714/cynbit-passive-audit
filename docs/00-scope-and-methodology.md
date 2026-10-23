@@ -44,7 +44,7 @@ No POST, PUT, PATCH, or DELETE was sent. No form was submitted. No Server Action
 - Raw HTML, `robots.txt`, `sitemap.xml`, and the 404 body are in [`evidence/raw/`](../evidence/raw/).
 - Bundle sizes, hashes, and the two Server Action extracts are in [`evidence/assets/`](../evidence/assets/); response headers for each bundle are in [`evidence/headers/assets/`](../evidence/headers/assets/). Originals are not committed; reproduce them from the hashes in the manifest.
 - Timing CSVs are in [`evidence/timings/`](../evidence/timings/).
-- Page renders captured with headless Firefox are in [`evidence/screenshots/`](../evidence/screenshots/). They are context only; header and timing claims rely on the text captures.
+- Page renders and two DevTools header captures are in [`evidence/screenshots/`](../evidence/screenshots/). They are context; header and timing claims rely on the text captures.
 - TLS and DNS observations are in [`evidence/tls/README.md`](../evidence/tls/README.md).
 - No cookies were set on any response. No PII, credentials, or session tokens were collected. The site's public business phone/address in JSON-LD was not reproduced because it is unnecessary for the findings.
 

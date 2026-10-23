@@ -7,7 +7,7 @@
 | Area | Security architecture / response headers |
 | Affected URL | All HTML routes: `/`, `/contact`, `/careers`, `/services`, `/bitelevate` |
 | Date | 2026-10-22 |
-| Evidence | [home headers](../../evidence/headers/home_run1.txt), [contact headers](../../evidence/headers/contact_run1.txt), [home HTML](../../evidence/raw/home_run1.html) |
+| Evidence | [home headers](../../evidence/headers/home_run1.txt), [contact headers](../../evidence/headers/contact_run1.txt), [home HTML](../../evidence/raw/home_run1.html), [DevTools capture](../../evidence/screenshots/home-response-headers.png) |
 
 ## What I observed
 

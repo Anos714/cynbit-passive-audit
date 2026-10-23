@@ -7,7 +7,7 @@
 | Area | Performance / caching |
 | Affected URL | `/careers` |
 | Date | 2026-10-22 |
-| Evidence | [careers headers](../../evidence/headers/careers_run1.txt), [timings](../../evidence/timings/pages.csv) |
+| Evidence | [careers headers](../../evidence/headers/careers_run1.txt), [timings](../../evidence/timings/pages.csv), [DevTools capture](../../evidence/screenshots/careers-response-headers.png) |
 
 ## What I observed
 
